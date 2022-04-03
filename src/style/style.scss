@@ -1,0 +1,41 @@
+$mainBackgroundColor: #292929;
+$fontColor: #ffff;
+$classes: ("node": #f7df1e, "typescript": #3178c6, "electron": #9feaf9, "sass": #cd669a);
+
+@mixin addColor($classes) {
+    @each $class, $color in $classes {
+        .#{$class} {
+            background-color: $color;
+            padding: 2px;
+            border-radius: 6px;
+            @if $class != "sass" {
+                color: $mainBackgroundColor;
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $mainBackgroundColor;
+    font-family: sans-serif;
+}
+
+h1, p {
+    color: $fontColor;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 3rem;
+}
+
+p {
+    margin-top: 1rem;
+    @include addColor($classes)
+}

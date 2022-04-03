@@ -1,0 +1,20 @@
+{
+  "name": "open-m-player",
+  "version": "1.0.0",
+  "description": "A simple, open source, music player",
+  "main": "build/main.js",
+  "scripts": {
+    "start": "npm run compile && npm run compile:sass && electron .",
+    "compile:sass": "sass ./src/style/style.scss ./build/style/style.css",
+    "compile": "tsc && cp -f src/index.html build",
+    "sass:dev": "sass --watch src/style/style.scss:build/style/style.css"
+  },
+  "author": "Captain Keys",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^18.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
