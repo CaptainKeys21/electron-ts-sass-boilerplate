@@ -12,9 +12,8 @@
   "author": "Captain Keys",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^18.0.1"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
+    "electron": "^18.0.1",
+    "sass": "^1.49.11",
+    "typescript": "^4.6.3"
   }
 }
