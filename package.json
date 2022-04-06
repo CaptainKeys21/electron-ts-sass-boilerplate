@@ -1,5 +1,5 @@
 {
-  "name": "open-m-player",
+  "name": "electron-ts-sass-boilerplate",
   "version": "1.0.0",
   "description": "A simple, open source, music player",
   "main": "build/main.js",
@@ -14,8 +14,9 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
-    "electron": "^18.0.1",
+    "electron": "^18.0.2",
     "eslint": "^8.12.0",
+    "prettier": "^2.6.2",
     "sass": "^1.49.11",
     "typescript": "^4.6.3"
   }
