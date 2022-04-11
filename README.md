@@ -4,7 +4,10 @@ Boileplate configurado para desenvolver com electron, typescript e sass.
 
 ### Comandos:
 
-- start -> Compila o código inteiro para uma build e o executa;
-- compile -> Compila o código e não executa
-- compile:sass -> Compila apenas o sass
-- sass:dev -> Fica vigiando o arquivo sass, procurando e atualizando mudanças
+- start -> executa o electron
+- build -> Compila o código
+- dev -> Compila automaticamente quando algum arquivo da pasta src é mudado
+
+#### Aviso
+
+os comandos start e dev devem ser executados em terminais diferentes

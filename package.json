@@ -4,18 +4,20 @@
   "description": "A simple, open source, music player",
   "main": "build/main.js",
   "scripts": {
-    "start": "npm run compile && npm run compile:sass && electron .",
-    "compile:sass": "sass ./src/style/style.scss ./build/style/style.css",
-    "compile": "tsc && cp -f src/index.html build",
-    "sass:dev": "sass --watch src/style/style.scss:build/style/style.css"
+    "start": "electron .",
+    "build": "tsc && cp -fu ./src/index.html ./build && sass src/style:build/style",
+    "dev": "tsc --watch & sass --watch src/style:build/style & chokidar '**/*.html' -c 'cp -fu ./src/index.html ./build'"
   },
   "author": "Captain Keys",
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
-    "electron": "^18.0.2",
-    "eslint": "^8.12.0",
+    "chokidar-cli": "^3.0.0",
+    "electron": "^18.0.3",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.2",
     "sass": "^1.49.11",
     "typescript": "^4.6.3"
